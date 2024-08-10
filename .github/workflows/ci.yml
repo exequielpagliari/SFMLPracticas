@@ -37,3 +37,13 @@ jobs:
 
     - name: Build
       run: cd SFMLHelloWindow && cmake --build build --config Release
+
+    - name: Configure SFMLTimber
+      run: cd SFMLTimber && cmake -B build ${{matrix.platform.flags}} ${{matrix.config.flags}}
+
+    - name: Build SFMLTimber
+      run: cd SFMLTimber && cmake --build build --config Release
+
+
+
+      
