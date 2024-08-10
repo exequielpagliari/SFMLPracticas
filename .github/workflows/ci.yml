@@ -33,7 +33,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Configure
-      run: cd SFMLHelloWorld && cmake -B build ${{matrix.platform.flags}} ${{matrix.config.flags}}
+      run: cd SFMLHelloWindow && cmake -B build ${{matrix.platform.flags}} ${{matrix.config.flags}}
 
     - name: Build
-      run: cd SFMLHelloWorld && cmake --build build --config Release
+      run: cd SFMLHelloWindow && cmake --build build --config Release
